@@ -275,6 +275,7 @@ namespace Pacman.GameLogic
                 Pacman.MoveSimulated();
                 foreach (Ghost g in Ghosts)
                 {
+                   
                     g.Move();
                     // check collisions				
                     if (g.Distance(Pacman) < 4.0f)
@@ -492,6 +493,7 @@ namespace Pacman.GameLogic
 				// move
 				Pacman.Move();
 				foreach( Ghost g in Ghosts ) {
+
 					g.Move();
 					// check collisions				
 					if( g.Distance(Pacman) < 4.0f ) {
@@ -557,6 +559,11 @@ namespace Pacman.GameLogic
         public void SaveGameStateImage(Graphics g)
         {
 
+        }
+
+        public void movesAsMtsTest()
+        {
+            
         }
 
         /// <summary>
