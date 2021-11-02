@@ -387,40 +387,6 @@ namespace Pacman.GameLogic
 		public float Distance(Entity entity) {
 			return (float)Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
 		}
-        public float UPDistance(Entity entity)
-        {
-            return (float)Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y - 1.0f - entity.Y, 2));
-        }
-        public float DownDistance(Entity entity)
-        {
-            return (float)Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y + 1.0f - entity.Y, 2));
-        }
-        public float RightDistance(Entity entity)
-        {
-            return (float)Math.Sqrt(Math.Pow(X + 1.0f - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
-        }
-        public float LeftDistance(Entity entity)
-        {
-            return (float)Math.Sqrt(Math.Pow(X - 1.0f - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
-        }
-
-		//public float GetShortestDistanceUsingMts(Entity entity)
-  //      {
-		//	float up = (float)Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y - 1.0f - entity.Y, 2));
-
-		//	float down = (float)Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y + 1.0f - entity.Y, 2));
-
-		//	float right = (float)Math.Sqrt(Math.Pow(X + 1.0f - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
-
-		//	float left = (float)Math.Sqrt(Math.Pow(X - 1.0f - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
-
-		//	float[] numbers = new[] { up, down, right, left };
-
-		//	float min = numbers.Min();
-
-		//	return min;
-		//}
-
 
 		public bool IsBelow(Entity entity){
 			if( Y <= entity.Y ) 

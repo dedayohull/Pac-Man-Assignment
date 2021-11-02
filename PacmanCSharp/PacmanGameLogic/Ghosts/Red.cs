@@ -11,7 +11,6 @@ namespace Pacman.GameLogic.Ghosts
 	public class Red : Ghost, ICloneable
 	{
 		public const int StartX = 111, StartY = 93;
-        Entity entity;
 		public Red(int x, int y, GameState gameState, double Speed, double FleeSpeed)
 			: base(x, y, gameState) {
 			this.name = "Red";

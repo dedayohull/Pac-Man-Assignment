@@ -336,14 +336,20 @@ namespace Pacman.GameLogic.Ghosts
         {
             Direction preferredDirection = Direction;
             
-			double up = Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y - 1.0f - entity.Y, 2));
-            double down = Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow(Y + 1.0f - entity.Y, 2));
-            double right = Math.Sqrt(Math.Pow(X + 1.0f - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
-            double left = Math.Sqrt(Math.Pow(X - 1.0f - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
-            Console.WriteLine("DEBUGGING!!!!!!");
+			double up = Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow((Y - 1.0f) - entity.Y, 2));
+
+            double down = Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow((Y + 1.0f) - entity.Y, 2));
+
+            double right = Math.Sqrt(Math.Pow((X + 1.0f) - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
+
+            double left = Math.Sqrt(Math.Pow((X - 1.0f) - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
+
+            Console.WriteLine("debugging my method");
 
             double a = Math.Min(up, down);
+
             double b = Math.Min(right, left);
+
 			double value = Math.Min(a, b);
 
             if (value.Equals(up))
@@ -366,60 +372,6 @@ namespace Pacman.GameLogic.Ghosts
 
 
 
-        //protected void MoveAsMts(Direction d1, Direction d2, Direction d3, Direction d4)
-        //{
-        //	Direction preferredDirection = Direction;
-        //	if (Math.Sqrt(Math.Pow(Node.X - GameState.Pacman.Node.X, 2) + Math.Pow(Node.Y - GameState.Pacman.Node.Y, 2)) > 0)
-        //		Console.WriteLine("DEBUGGING!!!!!!!!!");
-        //	{
-        //		if (IsRight(GameState.Pacman))
-        //		{
-        //			preferredDirection = Direction.Right;
-        //		}
-        //		else
-        //		{
-        //			preferredDirection = Direction.Left;
-        //		}
-        //              if (IsBelow(GameState.Pacman))
-        //              {
-        //			preferredDirection = Direction.Down;
-        //              }
-        //              else
-        //              {
-        //			preferredDirection = Direction.Up;
-        //              }
-        //	}
-
-        //}
-
-        //protected void MoveAsMts(Direction d1, Direction d2, Direction d3, Direction d4)
-        //{
-        //	Direction preferredDirection = Direction;
-        //	double left = Math.Sqrt(Math.Pow((Node.X - 0.0f) - GameState.Pacman.Node.X, 2) + Math.Pow(Node.Y - GameState.Pacman.Node.Y, 2));
-        //	double right = Math.Sqrt(Math.Pow((Node.X + 0.0f) - GameState.Pacman.Node.X, 2) + Math.Pow(Node.Y - GameState.Pacman.Node.Y, 2));
-        //	double up = Math.Sqrt(Math.Pow(Node.X - GameState.Pacman.Node.X, 2) + Math.Pow((Node.Y + 0.0f) - GameState.Pacman.Node.Y, 2));
-        //	double down = Math.Sqrt(Math.Pow(Node.X - GameState.Pacman.Node.X, 2) + Math.Pow((Node.Y - 0.0f) - GameState.Pacman.Node.Y, 2));
-
-        //	if (left < right && left < up && left < down)
-        //	{
-        //		 preferredDirection = Direction.Left;
-        //	}
-
-        //	if (right < left && right < up && right < down)
-        //	{
-        //		 preferredDirection = Direction.Right;
-        //	}
-
-        //	if (up < left && up < right && up < down)
-        //	{
-        //		 preferredDirection  = Direction.Up;
-        //	}
-        //	if (down < left && down < right && down < up)
-        //	{
-        //		 preferredDirection  = Direction.Down;
-        //	}
-
-        //}
 
         #region ICloneable Members
 

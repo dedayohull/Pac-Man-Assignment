@@ -130,7 +130,7 @@ namespace Pacman.GameLogic
             map = maps[Level];
             // default position ... find out where
             Pacman = new Pacman(Pacman.StartX, Pacman.StartY, this, 3.0f);
-            Ghosts[0] = Red = new Red(Red.StartX, Red.StartY, this, 2.8f, 1.5f);
+            Ghosts[0] = Red = new Red(Red.StartX, Red.StartY, this, 6.8f, 6.5f);
             Ghosts[1] = Pink = new Pink(Pink.StartX, Pink.StartY, this, 2.8f, 1.5f);
             Ghosts[2] = Blue = new Blue(Blue.StartX, Blue.StartY, this, 2.8f, 1.5f);
             Ghosts[3] = Brown = new Brown(Brown.StartX, Brown.StartY, this, 2.8f, 1.5f);
@@ -561,10 +561,7 @@ namespace Pacman.GameLogic
 
         }
 
-        public void movesAsMtsTest()
-        {
-            
-        }
+    
 
         /// <summary>
         /// Return whether or not there is a ghost at the provided coordinates
