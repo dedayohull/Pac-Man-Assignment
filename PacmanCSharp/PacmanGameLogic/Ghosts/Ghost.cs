@@ -325,24 +325,19 @@ namespace Pacman.GameLogic.Ghosts
 			}
 		}
 
-        //     protected void MoveAsMts()
-        //     {
-        //Entity entity;
-
-        //MoveAsMts(entity);
-        //     }
+  
 
         public void MoveAsMts(Entity entity)
         {
-            Direction preferredDirection = Direction;
+           // Direction preferredDirection = Direction;
             
-			double up = Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow((Y - 1.0f) - entity.Y, 2));
+			double up = Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow((Y - 1) - entity.Y, 2));
 
-            double down = Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow((Y + 1.0f) - entity.Y, 2));
+            double down = Math.Sqrt(Math.Pow(X - entity.X, 2) + Math.Pow((Y + 1) - entity.Y, 2));
 
-            double right = Math.Sqrt(Math.Pow((X + 1.0f) - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
+            double right = Math.Sqrt(Math.Pow((X + 1) - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
 
-            double left = Math.Sqrt(Math.Pow((X - 1.0f) - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
+            double left = Math.Sqrt(Math.Pow((X - 1) - entity.X, 2) + Math.Pow(Y - entity.Y, 2));
 
             Console.WriteLine("debugging my method");
 
@@ -354,19 +349,19 @@ namespace Pacman.GameLogic.Ghosts
 
             if (value.Equals(up))
             {
-                preferredDirection = Direction.Up;
+				NextDirection = Direction.Up;
             }
             else if (value.Equals(down))
             {
-                preferredDirection = Direction.Down;
+				NextDirection = Direction.Down;
             }
             else if (value.Equals(right))
             {
-                preferredDirection = Direction.Right;
+				NextDirection = Direction.Right;
             }
             else if (value.Equals(left))
             {
-                preferredDirection = Direction.Left;
+				NextDirection = Direction.Left;
             }
         }
 
